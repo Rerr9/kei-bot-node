@@ -7,10 +7,10 @@ client.commands = new Collection();
 client.commandArray = [];
 
 //fs.readdirSync('./${process.cwd()}/functions')
-const functionFolders = fs.readdirSync(`./src/functions`)
+const functionFolders = fs.readdirSync(`./functions`)
 for (const folder of functionFolders) {
   const functionFiles = fs
-    .readdirSync(`./src/functions/${folder}`)
+    .readdirSync(`./functions/${folder}`)
     .filter((file) => file.endsWith('.js'))
   for (const file of functionFiles)
     require(`./functions/${folder}/${file}`)(client);
