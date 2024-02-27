@@ -1,9 +1,9 @@
 const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
 
-const creator = require('./models/creator');
+const creator = require('../../models/creator');
 
 const fs = require('fs');
-const drawingsPath = require('./data/lists/draw.json');
+const drawingsPath = require('../../data/lists/draw.json');
 
 module.exports = {
   data: new SlashCommandBuilder()
