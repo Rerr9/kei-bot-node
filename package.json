@@ -1,0 +1,21 @@
+{
+  "name": "kei-bot-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "node ."
+  },
+  "keywords": [],
+  "author": "Rerr",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/rest": "^2.0.0",
+    "@types/node": "^18.0.6",
+    "chalk": "^4.1.2",
+    "discord-api-types": "^0.37.53",
+    "discord.js": "^14.12.1",
+    "express": "^4.18.2",
+    "node-fetch": "^3.2.6"
+  }
+}
