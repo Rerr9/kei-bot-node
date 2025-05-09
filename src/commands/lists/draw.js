@@ -5,6 +5,20 @@ const creator = require('../../models/creator');
 const fs = require('fs');
 const drawingsPath = require('../../data/lists/draw.json');
 
+const drawEmbed = new EmbedBuilder()
+  .setColor(0x3498db)
+  .setTitle('Rerr\'s Stuff to Draw')
+  .addFields(
+    {
+      name: '',
+      value: drawingsPath.join('\n')
+    }
+  )
+  .setFooter({
+    text: 'Not all will be lewded, but many will be~\n/draw <entry>',
+    iconURL: creator.avatarURL
+  });
+
 module.exports = {
   data: new SlashCommandBuilder()
     .setName('draw')
@@ -28,20 +42,6 @@ module.exports = {
       });
 
     } else {
-      const drawEmbed = new EmbedBuilder()
-        .setColor(0x3498db)
-        .setTitle('Rerr\'s Stuff to Draw')
-        .setFields(
-          {
-            name: '',
-            value: drawingsPath.join('\n')
-          }
-        )
-        .setFooter({
-          text: 'Not all will be lewded, but many will be~\n/draw <entry>',
-          iconURL: creator.avatarURL
-        });
-
       await interaction.reply({
         embeds: [drawEmbed]
       });
